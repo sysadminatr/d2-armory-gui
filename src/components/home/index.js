@@ -37,18 +37,18 @@ export default class Home extends React.Component {
             <Grid className="menu-grid">
                 <Cell col={12} tablet={12} phone={12}>
                     <ul className="menu">
-                        <li><a title="Checkout the ladder" href="http://ladder.slashdiablo.net/exp/overall"><Icon name="timeline" /><span>LADDER</span></a></li>
-                        <li><a title="Slash subreddit" href="https://reddit.com/r/slashdiablo"><Icon name="comment" /><span>REDDIT</span></a></li>
+                        <li><a title="Checkout the ladder" href="https://diablo.technoadmin.ru/ladder.php"><Icon name="timeline" /><span>ЛАДДЕР</span></a></li>
+                        <li><a title="Slash subreddit" href="https://diablo.technoadmin.ru/"><Icon name="comment" /><span>Главная</span></a></li>
                     </ul>
                 </Cell>
             </Grid>
-            <h1>The armory</h1>
-            <p>This is where you can search all the Slashdiablo characters and get a detailed view of their skills, items, stats and mercenary.</p>
+            <h1>Оружейная</h1>
+            <p>Здесь вы можете найти всех персонажей и получить подробную информацию об их навыках, предметах, характеристиках и наемниках.</p>
             <div className="searcher">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" onChange={this.handleChange} />
-                    {this.state.error === true && <p className="error-label">Invalid character name, please try another.</p>}
-                    <button className="mdl-button mdl-button--raised mdl-button--colored" type="submit">Search</button>
+                    {this.state.error === true && <p className="error-label">Неверное имя персонажа, попробуйте другое..</p>}
+                    <button className="mdl-button mdl-button--raised mdl-button--colored" type="submit">Поиск</button>
                 </form>
             </div>
 

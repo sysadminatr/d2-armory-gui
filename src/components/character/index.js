@@ -199,7 +199,7 @@ export default class Character extends React.Component {
         <div className="broadcast">
           <Icon name="power" />
           <h1 className="broadcast-text">
-            Character unfortunately does not exist, bug Meanski about it.
+            К сожалению, персонажа не существует.
           </h1>
         </div>
       );
@@ -211,8 +211,8 @@ export default class Character extends React.Component {
         <div className="broadcast">
           <Icon name="adb" />
           <h1 className="broadcast-text">
-            Couldn't parse the character, missing magic attributes probably,
-            developers have been notified.
+            Не удалось проанализировать персонажа, вероятно, отсутствуют магические атрибуты.
+            Разработчики уведомлены.
           </h1>
         </div>
       );
@@ -223,7 +223,7 @@ export default class Character extends React.Component {
         <div className="broadcast">
           <Spinner />
           <h1 className="broadcast-text">
-            Distorting the space time continuum.
+            Искажение пространственно-временного континуума.
           </h1>
         </div>
       );
@@ -234,7 +234,7 @@ export default class Character extends React.Component {
     if (this.state.is_dead === 1) {
       return (
         <div className="broadcast">
-          <h1 className="broadcast-text">Dead af.</h1>
+          <h1 className="broadcast-text">Умер.</h1>
         </div>
       );
     }
@@ -246,17 +246,17 @@ export default class Character extends React.Component {
             <ul className="menu">
               <li>
                 <a
-                  title="Checkout the ladder"
-                  href="http://ladder.slashdiablo.net/exp/overall"
+                  title="Посмотреть Ладдер"
+                  href="https://diablo.technoadmin.ru/ladder.php"
                 >
                   <Icon name="timeline" />
-                  <span>LADDER</span>
+                  <span>Ладдер</span>
                 </a>
               </li>
               <li>
                 <a title="Search the armory" href="/">
                   <Icon name="search" />
-                  <span>SEARCH</span>
+                  <span>Поиск</span>
                 </a>
               </li>
               <li>
@@ -265,7 +265,7 @@ export default class Character extends React.Component {
                   href="https://reddit.com/r/slashdiablo"
                 >
                   <Icon name="comment" />
-                  <span>REDDIT</span>
+                  <span>Главная</span>
                 </a>
               </li>
             </ul>
@@ -276,25 +276,25 @@ export default class Character extends React.Component {
               ripple
             >
               <Tab>
-                <span className="visible-desktop">Equipped</span>
+                <span className="visible-desktop">Снаряжение</span>
                 <span className="visible-mobile">
                   <Icon name="person" />
                 </span>
               </Tab>
               <Tab>
-                <span className="visible-desktop">Inventory</span>
+                <span className="visible-desktop">Инвентарь</span>
                 <span className="visible-mobile">
                   <Icon name="room" />
                 </span>
               </Tab>
               <Tab>
-                <span className="visible-desktop">Stash</span>
+                <span className="visible-desktop">Тайник</span>
                 <span className="visible-mobile">
                   <Icon name="home" />
                 </span>
               </Tab>
               <Tab>
-                <span className="visible-desktop">Cube</span>
+                <span className="visible-desktop">Куб</span>
                 <span className="visible-mobile">
                   <Icon name="crop_square" />
                 </span>
@@ -315,17 +315,17 @@ export default class Character extends React.Component {
             </h2>
             <h1 className="char-name">{this.state.header.name}</h1>
             {this.state.header.status.expansion === false && (
-              <h1 className="char-name classic">Classic</h1>
+              <h1 className="char-name classic">Классический</h1>
             )}
             {this.state.header.status.hardcore === true && (
-              <h1 className="char-name hardcore">Hardcore</h1>
+              <h1 className="char-name hardcore">Хардкор</h1>
             )}
             {this.state.header.status.ladder === true && (
-              <h1 className="char-name ladder">Ladder</h1>
+              <h1 className="char-name ladder">Ладдер</h1>
             )}
             {this.state.header.status.hardcore === true &&
               this.state.header.status.died === true && (
-                <h1 className="char-name hc-dead">Dead</h1>
+                <h1 className="char-name hc-dead">Мертвый</h1>
               )}
           </Cell>
 
@@ -354,7 +354,7 @@ export default class Character extends React.Component {
             !this.state.statistics_error_occurred && (
               <div className="stats-msg">
                 <Spinner />
-                <h4>Loading statistics</h4>
+                <h4>Загрузка статистики</h4>
               </div>
             )}
 
@@ -364,7 +364,7 @@ export default class Character extends React.Component {
 
           {this.state.statistics_error_occurred && (
             <div className="stats-msg">
-              <h4>Failed to load statistics</h4>
+              <h4>Не удалось загрузить статистику</h4>
             </div>
           )}
 
